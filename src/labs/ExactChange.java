@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class ExactChange {
 
     public static void exactChange(int userTotal, int[] coinVals) {
-        int[] coinvals = new int[5];
 
         final int DOLLARVALUE = 100;
         final int QUARTERVALUE = 25;
@@ -19,7 +18,14 @@ public class ExactChange {
         int numberOfNickels;
         int numberOfPennies;
 
-        if (userTotal > 0) {
+        String[] coinNamesPlural = {"dollars", "quarters", "dimes", "nickels", "pennies"};
+        String[] coinNamesSingular = {"dollar", "quarter", "dime", "nickel", "penny"};
+
+        if (userTotal <= 0) {
+            System.out.println("no change");
+        }
+
+        else if (userTotal > 0) {
             numberofDollars = userTotal / DOLLARVALUE;
             leftover = userTotal % DOLLARVALUE;
             numberOfQuarters = leftover / QUARTERVALUE;
@@ -30,22 +36,31 @@ public class ExactChange {
             leftover = leftover % NICKELVALUE;
             numberOfPennies = leftover / PENNYVALUE;
 
-            coinvals[0] = numberofDollars;
-            coinvals[1] = numberOfQuarters;
-            coinvals[2] = numberofDimes;
-            coinvals[3] = numberOfNickels;
-            coinvals[4] = numberOfPennies;
+            coinVals[0] = numberofDollars;
+            coinVals[1] = numberOfQuarters;
+            coinVals[2] = numberofDimes;
+            coinVals[3] = numberOfNickels;
+            coinVals[4] = numberOfPennies;
+            // added values into the integer array
 
             for (int i = 0; i < coinVals.length; i++) {
-                System.out.println(coinVals[i]);
+                if(coinVals[i] > 0 && coinVals[i] == 1) {
+                    System.out.println(coinVals[i] + " " + coinNamesSingular[i]);
+                }
+                else if (coinVals[i] > 0 && coinVals[i] >= 2) {
+                    System.out.println(coinVals[i] + " " + coinNamesPlural[i]);
+                }
             }
+            // if number of coins in each index is greater than 0 and = to 1, then print out the # of coins and it's singular name
+            // if number of coins in each index is greater than 0 and >= 2, then print out the # of coins and the plural name of coin
+
         }
     }
 
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         int userTotal = scnr.nextInt();
-        int[] numberOfCoins = {5, 23, 34, 67, 24};
+        int[] numberOfCoins = new int[5];
         exactChange(userTotal, numberOfCoins);
     }
 }
