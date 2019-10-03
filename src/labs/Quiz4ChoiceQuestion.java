@@ -7,7 +7,8 @@ public class Quiz4ChoiceQuestion extends QuizQuestion{
     private String choiceD;
 
 
-    public Quiz4ChoiceQuestion (String question, String choiceA, String choiceB, String choiceC, String choiceD, String answer) {
+    public Quiz4ChoiceQuestion (String question, String choiceA, String choiceB,
+                                String choiceC, String choiceD, String answer) {
         super(question, answer);
         this.choiceA = choiceA;
         this.choiceB = choiceB;
@@ -15,7 +16,7 @@ public class Quiz4ChoiceQuestion extends QuizQuestion{
         this.choiceD = choiceD;
     }
 
-    // because Quiz4ChoiceQuestion is a child of QuizQuestion, Quiz4ChoiceQuestion also has the display() method
-    // but displays the question value from the Quiz4ChoiceQuestion constructor
-
+    // because Quiz4ChoiceQuestion is a child of QuizQuestion, Quiz4ChoiceQuestion
+    // also has the display() method but displays the question value from
+    // the Quiz4ChoiceQuestion constructor
 }
