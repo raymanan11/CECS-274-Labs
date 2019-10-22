@@ -15,9 +15,7 @@ public class AreaCalculatorTest {
             System.out.println(area);
         }
         catch (Exception error){
-            System.out.println("Error is " + error);
+            System.out.println("Hi");
         }
     }
-
-
 }

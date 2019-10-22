@@ -1,7 +1,5 @@
 package labs;
 
-import java.io.IOException;
-
 public class AreaCalculator {
     public int calculateRectangle(int length, int height) {
         if (length < 0) {
