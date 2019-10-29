@@ -24,7 +24,7 @@ public class Bunny {
 
     public static void main(String[] args) {
         Bunny bunny = new Bunny();
-        System.out.println("total bunny ears :" + bunny.bunnyEars(4));
-        System.out.println("total bunny ears :" + bunny.bunnyFunnyEars(4));
+        System.out.println("Total bunny ears: " + bunny.bunnyEars(4));
+        System.out.println("Total bunny funny ears: "  + bunny.bunnyFunnyEars(4));
     }
 }
