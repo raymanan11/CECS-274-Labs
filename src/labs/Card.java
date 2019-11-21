@@ -17,17 +17,7 @@ public class Card{
 
     public int compareto(Card cards) {
 
-        int result;
-        boolean nums = this.value > (cards.value);
-
-        if (nums) {
-            result = 1;
-        }
-
-        else {
-            result = 0;
-        }
-        return result;
+        return this.value - cards.value;
 
     }
 
