@@ -1,10 +1,9 @@
 package labs;
 
 public class LinkedListChar {
-    NodeChar head;
+    private NodeChar head;
 
     public LinkedListChar() {
-
         head = null;
     }
 
