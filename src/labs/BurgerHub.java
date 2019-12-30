@@ -22,7 +22,7 @@ public class BurgerHub {
                     queue.enqueue(fastFood);
                     break;
                 case "2":
-                    System.out.println("Order " + queue.dequeue() + " served.");
+                    System.out.println(queue.dequeue());
 
                     break;
                 case "3":

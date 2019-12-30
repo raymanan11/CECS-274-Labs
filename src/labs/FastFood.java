@@ -12,7 +12,7 @@ public class FastFood {
     }
 
     public String toString() {
-        return food + "/" + drink + "/" + side;
+        return "Order " + food + "/" + drink + "/" + side + " served.";
         // customizes what is printed out when printing out reference variable fastFood
         // otherwise it will print out the address which we don't want
     }
